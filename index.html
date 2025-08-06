@@ -28,9 +28,7 @@
         
         /* ===== HERO SECTION ===== */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/soya-oil-tanker.jpg');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), #2a7fba;
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -82,16 +80,7 @@
         }
         
         .intro-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .intro-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+            display: none;
         }
         
         .advantage-grid {
@@ -165,28 +154,11 @@
             margin-top: 0;
         }
         
-        /* ===== LAB REPORT ===== */
+        /* ===== LAB REPORT SECTION ===== */
         .lab-report {
             text-align: center;
             padding: 60px 0;
             background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            margin-top: 20px;
-        }
-        
-        .download-btn:hover {
-            background: #1a5f8b;
-            transform: translateY(-3px);
         }
         
         /* ===== CONTACT SECTION ===== */
@@ -218,10 +190,17 @@
             transform: translateX(5px);
         }
         
-        .contact-item img {
+        .contact-icon {
             width: 24px;
             height: 24px;
             margin-right: 15px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
         }
         
         .contact-item a {
@@ -243,12 +222,14 @@
             margin-top: 30px;
         }
         
-        .platform-badges img {
-            height: 40px;
+        .platform-badge {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border-radius: 5px;
             transition: all 0.3s;
         }
         
-        .platform-badges img:hover {
+        .platform-badge:hover {
             transform: translateY(-5px);
         }
         
@@ -331,10 +312,6 @@
                     </ul>
                     
                     <p>With <strong>54% Linoleic Acid content</strong> and <strong>ultra-low FFA (4.2%)</strong>, our product outperforms alternatives in both nutritional value and processing efficiency.</p>
-                </div>
-                
-                <div class="intro-image">
-                    <img src="images/soya-acid-oil-drum.jpg" alt="Soya Acid Oil Drums">
                 </div>
             </div>
             
@@ -443,14 +420,11 @@
         </div>
     </section>
     
-    <!-- ===== LAB REPORT ===== -->
+    <!-- ===== LAB REPORT SECTION ===== -->
     <section class="lab-report">
         <div class="container">
             <h2>Quality Certified by NABL-Accredited Labs</h2>
-            <p>Download our latest test reports for batch-specific specifications</p>
-            <a href="lab_reports/LAB_TEST_REPORT.pdf" download class="download-btn">
-                Download Lab Report (PDF)
-            </a>
+            <p>Contact us for complete lab reports and quality certifications</p>
         </div>
     </section>
     
@@ -462,22 +436,22 @@
             
             <div class="contact-card">
                 <div class="contact-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670057.png" alt="WhatsApp">
+                    <div class="contact-icon">W</div>
                     <a href="https://wa.me/6289274766">+91 62892 74766</a>
                 </div>
                 
                 <div class="contact-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                    <div class="contact-icon">E</div>
                     <a href="mailto:adishakti.2022@gmail.com">adishakti.2022@gmail.com</a>
                 </div>
                 
                 <div class="contact-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png" alt="Website">
+                    <div class="contact-icon">W</div>
                     <a href="https://ecofeeds.in" target="_blank">ecofeeds.in</a>
                 </div>
                 
                 <div class="contact-item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Address">
+                    <div class="contact-icon">A</div>
                     <span>493/B, G.T. Road, Shibpur, Howrah – 711102, West Bengal, India</span>
                 </div>
             </div>
@@ -489,14 +463,14 @@
         <div class="container">
             <h2>Find Us On Global B2B Platforms</h2>
             <div class="platform-badges">
-                <a href="https://www.exportersindia.com/adishakti-enterprise" target="_blank">
-                    <img src="images/exporters-india.png" alt="Exporters India">
+                <a href="https://www.exportersindia.com/adishakti-enterprise" target="_blank" class="platform-badge">
+                    Exporters India
                 </a>
-                <a href="https://www.tradewheel.com" target="_blank">
-                    <img src="images/tradewheel.png" alt="Tradewheel">
+                <a href="https://www.tradewheel.com" target="_blank" class="platform-badge">
+                    Tradewheel
                 </a>
-                <a href="https://go4worldbusiness.com" target="_blank">
-                    <img src="images/go4business.png" alt="Go4WorldBusiness">
+                <a href="https://go4worldbusiness.com" target="_blank" class="platform-badge">
+                    Go4WorldBusiness
                 </a>
             </div>
         </div>
