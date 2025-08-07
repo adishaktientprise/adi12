@@ -4,1024 +4,688 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adi Shakti Enterprise | Premium Soya Acid Oil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
-            --primary: #2a5a2a;  /* Dark green */
-            --secondary: #e67e22; /* Orange */
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primary-color: #2E7D32; /* Changed from brown to green */
+            --secondary-color: #388E3C;
+            --accent-color: #FF8C00;
+            --light-color: #F5DEB3;
         }
         
         body {
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
         }
         
-        header {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .navbar {
+            background-color: var(--primary-color);
         }
         
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--text-light);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 1.5rem;
-        }
-        
-        nav ul li a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--secondary);
-        }
-        
-        .hero {
-            background-color: var(--primary);
-            height: auto;
-            padding: 8rem 0 4rem;
-            text-align: center;
-            color: var(--text-light);
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: var(--text-light);
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #d35400;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        section {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background-color: var(--secondary);
-            bottom: 0;
-            left: 25%;
-        }
-        
-        .about-content {
-            display: block;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .about-text {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .about-text p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .quality-badge {
-            background-color: #e8f5e9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            border-left: 4px solid var(--secondary);
-        }
-        
-        .quality-badge p {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .products {
-            background-color: var(--light);
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .product-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .product-info h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .specs {
-            margin: 1.5rem 0;
-        }
-        
-        .spec-item {
-            display: flex;
-            margin-bottom: 0.8rem;
-        }
-        
-        .spec-item i {
-            color: var(--secondary);
-            margin-right: 0.8rem;
-        }
-        
-        /* Comparison Section Styles */
-        .comparison-section {
-            background-color: #f9f9f9;
-        }
-        
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .comparison-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .comparison-card h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .spec-comparison {
-            margin-bottom: 2rem;
-        }
-        
-        .spec-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .spec-row.header {
-            font-weight: bold;
-            border-bottom: 2px solid var(--secondary);
-        }
-        
-        .spec-row .spec-name {
-            flex: 2;
-        }
-        
-        .spec-row .spec-value {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .spec-row .spec-value.advantage {
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        /* Research Section Styles */
-        .research-section {
-            background-color: white;
-        }
-        
-        .research-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: #f9f9f9;
-            border-left: 4px solid var(--secondary);
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .research-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .research-item .source {
-            font-style: italic;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .chart-container {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-        
-        .chart-remarks {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background-color: #e8f5e9;
-            border-radius: 8px;
-        }
-        
-        .chart-remarks h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .advantages-list {
-            margin-left: 1.5rem;
-        }
-        
-        .advantages-list li {
-            margin-bottom: 0.8rem;
-            line-height: 1.6;
-        }
-        
-        .process {
-            background-color: var(--primary);
-            color: var(--text-light);
-        }
-        
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .step {
-            background-color: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .step i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .clients {
-            background-color: var(--light);
-            text-align: center;
-        }
-        
-        .client-logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        
-        .client-logo {
-            height: 60px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: all 0.3s;
-        }
-        
-        .client-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-        
-        .contact {
-            background-color: white;
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .contact-info h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-item i {
-            color: var(--secondary);
-            margin-right: 1rem;
-            margin-top: 0.3rem;
-        }
-        
-        .b2b-platforms h4 {
-            margin-bottom: 1rem;
-        }
-        
-        .platform-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .platform-link {
-            display: inline-block;
-            background-color: #f9f9f9;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        
-        .platform-link:hover {
-            background-color: var(--secondary);
+        .hero-section {
+            background-color: var(--primary-color);
             color: white;
+            padding: 120px 0;
+            text-align: center;
         }
         
-        .contact-form {
-            background-color: #f9f9f9;
-            padding: 2rem;
-            border-radius: 8px;
+        .product-highlight {
+            background-color: var(--light-color);
+            padding: 50px 0;
         }
         
-        .form-group {
-            margin-bottom: 1.5rem;
+        .specs-card {
+            border-left: 5px solid var(--accent-color);
+            transition: transform 0.3s;
         }
         
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+        .specs-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
+        .application-card {
+            height: 100%;
+            transition: all 0.3s;
         }
         
-        .form-group textarea {
-            height: 150px;
+        .application-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         footer {
-            background-color: var(--dark);
-            color: var(--text-light);
-            padding: 3rem 0 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
         }
         
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+        .pulse-animation {
+            animation: pulse 2s infinite;
         }
         
-        .footer-section h3 {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
-        .footer-links {
-            list-style: none;
+        .tech-comparison {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .footer-links li {
-            margin-bottom: 0.5rem;
+        .research-card {
+            border-top: 4px solid var(--accent-color);
+            height: 100%;
         }
         
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: var(--text-light);
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--secondary);
-        }
-        
-        .copyright {
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
+        .quality-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>Adi Shakti Enterprise</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#comparison">Why Us</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#contact">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fw-bold">ADI SHAKTI ENTERPRISE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specifications">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#applications">Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h2>Premium Quality Soya Acid Oil</h2>
-            <p>Supplying high-grade soya acid oil to poultry feed manufacturers and biodiesel producers worldwide since 2021. Our product meets the highest industry standards for quality and consistency.</p>
-            <a href="#contact" class="btn">Get a Quote</a>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeIn">Premium Soya Acid Oil</h1>
+            <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">High-quality feed ingredient for poultry nutrition & biodiesel production</p>
+            <div class="quality-badge animate__animated animate__fadeIn animate__delay-2s">
+                Quality Certified by NABL-Accredited Labs
+            </div>
+            <a href="#contact" class="btn btn-warning btn-lg px-4 py-2 pulse-animation">Get a Quote Today</a>
         </div>
     </section>
 
-    <section class="about" id="about">
+    <!-- About Section -->
+    <section id="about" class="py-5">
         <div class="container">
-            <div class="section-title">
-                <h2>About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About Adi Shakti Enterprise</h2>
+                    <p class="lead">Trusted manufacturer of premium Soya Acid Oil since 2020</p>
+                    <p>Located in Katwa, Purba Burdwan, West Bengal, we specialize in processing high-quality Soya Acid Oil that meets stringent industry standards. Our state-of-the-art facility ensures consistent quality and reliable supply for our domestic and international clients.</p>
+                    <p>We take pride in serving poultry feed manufacturers and biodiesel producers across India and are now expanding our global footprint.</p>
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-outline-primary me-2">Contact Us</a>
+                        <a href="#product" class="btn btn-primary">Our Product</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tech-comparison p-4">
+                        <h4 class="text-center mb-4">Key Advantages Over Competitors</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Free Fatty Acid
+                                <span class="badge bg-primary rounded-pill">&lt;5%</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Linoleic Acid Content
+                                <span class="badge bg-primary rounded-pill">50-55%</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Impurities & Moisture
+                                <span class="badge bg-primary rounded-pill">&lt;0.30%</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Sulphur Content
+                                <span class="badge bg-primary rounded-pill">&lt;55ppm</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-3">
+                            <small>Contact us for complete lab reports and quality certifications</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Adi Shakti Enterprise is a leading processor of Soya Acid Oil based in Katwa, Purba Burdwan, West Bengal. Since our establishment in 2021, we have been committed to producing high-quality soya acid oil that serves as an essential ingredient for poultry feed and biodiesel production.</p>
+        </div>
+    </section>
+
+    <!-- Product Highlight -->
+    <section id="product" class="product-highlight py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Premium Product</h2>
+                <p class="lead">Soya Acid Oil - The ideal solution for your nutritional and industrial needs</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Soya Acid Oil</h3>
+                            <p class="card-text">Our carefully processed Soya Acid Oil is rich in essential fatty acids, proteins, and vital nutrients that promote healthy growth in poultry while being an excellent raw material for biodiesel production.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Ideal fat source for poultry feed</li>
+                                <li class="list-group-item">High energy content</li>
+                                <li class="list-group-item">Excellent digestibility</li>
+                                <li class="list-group-item">Consistent quality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Packaging & Supply</h3>
+                            <p class="card-text">We offer flexible packaging solutions to meet your specific requirements:</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Bulk supply in tankers</li>
+                                <li class="list-group-item">Drum packaging (180-200 kg)</li>
+                                <li class="list-group-item">Flexible intermediate bulk containers (FIBC)</li>
+                                <li class="list-group-item">Custom packaging available</li>
+                            </ul>
+                            <div class="mt-3">
+                                <p>We ensure safe and secure transportation with proper documentation for both domestic and international shipments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Advantages Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="fw-bold text-center mb-4">Why Choose Our Soya Acid Oil Over Other Vegetable Oils?</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex mb-4">
+                                        <div class="me-4 text-warning">
+                                            ★
+                                        </div>
+                                        <div>
+                                            <h4>Optimal Free Fatty Acid (<5%)</h4>
+                                            <p>Ensures better digestibility for poultry and easier processing for biodiesel compared to oils with higher FFA levels (7-10%).</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-4">
+                                        <div class="me-4 text-warning">
+                                            ★
+                                        </div>
+                                        <div>
+                                            <h4>Ideal Iodine Value (125)</h4>
+                                            <p>Balanced fatty acid profile provides better oxidative stability than sunflower oil and higher nutritional value than palm oil.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex mb-4">
+                                        <div class="me-4 text-warning">
+                                            ★
+                                        </div>
+                                        <div>
+                                            <h4>Superior Purity (<0.30%)</h4>
+                                            <p>Lower impurities and moisture content than palm acid oil or rice bran oil, resulting in better feed conversion and biodiesel yields.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="me-4 text-warning">
+                                            ★
+                                        </div>
+                                        <div>
+                                            <h4>Low Contaminants</h4>
+                                            <p>Sulphur (<55ppm) and phosphorous (<50ppm) levels are significantly lower than many competing oils, making it safer and more environmentally friendly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <div class="quality-badge">
+                                    Quality Certified by NABL-Accredited Labs
+                                </div>
+                                <p class="mt-2">Contact us for complete lab reports and quality certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="fw-bold text-center mb-4">Scientific Research Supporting Soya Acid Oil Advantages</h2>
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card research-card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-primary">Poultry Nutrition</h5>
+                                            <p class="card-text">University of Georgia (2019) showed 6-8% better weight gain in broilers compared to palm-based feeds.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card research-card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-primary">Biodiesel Quality</h5>
+                                            <p class="card-text">ASTM standards confirm superior cetane number (48-52) and 12% lower particulate emissions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card research-card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-primary">Economic Benefits</h5>
+                                            <p class="card-text">FAO Technical Paper (2020) highlights cost advantages in both feed and fuel applications.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="fw-bold text-center mb-4">Linoleic Acid Comparison</h2>
+                            <p class="text-center lead mb-4">Soya Acid Oil vs Other Vegetable Oils</p>
+                            
+                            <div class="table-responsive mb-4">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Oil Type</th>
+                                            <th>Linoleic Acid Content (%)</th>
+                                            <th>Poultry Feed Benefits</th>
+                                            <th>Biodiesel Benefits</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-success fw-bold">
+                                            <td>Soya Acid Oil</td>
+                                            <td>50-55</td>
+                                            <td>Essential fatty acids for growth, better feed conversion</td>
+                                            <td>Excellent cold flow properties, high cetane number</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Palm Oil</td>
+                                            <td>9-11</td>
+                                            <td>May require supplementation</td>
+                                            <td>Prone to crystallization in cold weather</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sunflower Oil</td>
+                                            <td>65-75</td>
+                                            <td>Can oxidize quickly in feed</td>
+                                            <td>Higher NOx emissions during combustion</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rapeseed Oil</td>
+                                            <td>20-25</td>
+                                            <td>Lower energy density</td>
+                                            <td>Requires winterization for biodiesel</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recycled Veg Oil</td>
+                                            <td>Variable (30-60)</td>
+                                            <td>Quality inconsistency risks</td>
+                                            <td>Contaminants may affect engine performance</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Poultry Feed Advantages</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">50-55% linoleic acid meets essential fatty acid requirements</li>
+                                                <li class="list-group-item">3-5% better feed conversion ratios than palm-based feeds</li>
+                                                <li class="list-group-item">Balanced 1:3 saturated/unsaturated fat ratio optimizes absorption</li>
+                                                <li class="list-group-item">Improves feathering and skin quality in chickens</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Biodiesel Advantages</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Ideal linoleic range for oxidative stability and cold flow</li>
+                                                <li class="list-group-item">Cloud point of -3°C to -5°C vs palm biodiesel's +13°C</li>
+                                                <li class="list-group-item">Superior lubricity (HFRR wear scar 314μm vs palm's 360μm)</li>
+                                                <li class="list-group-item">Reduces production costs with consistent quality</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications -->
+    <section id="specifications" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Product Specifications</h2>
+                <p class="lead">Meeting stringent quality standards for diverse applications</p>
+                <div class="quality-badge">
+                    Quality Certified by NABL-Accredited Labs
+                </div>
+                <p>Contact us for complete lab reports and quality certifications</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 specs-card p-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Free Fatty Acid</h3>
+                            <p class="display-6 text-primary fw-bold">Below 5%</p>
+                            <p class="card-text">Ensures optimal quality for both feed and industrial applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 specs-card p-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Iodine Value</h3>
+                            <p class="display-6 text-primary fw-bold">125</p>
+                            <p class="card-text">Indicates the degree of unsaturation, important for nutritional value.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 specs-card p-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Impurities & Moisture</h3>
+                            <p class="display-6 text-primary fw-bold">&lt; 0.30%</p>
+                            <p class="card-text">Minimal impurities ensure better shelf life and processing efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 specs-card p-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Sulphur Content</h3>
+                            <p class="display-6 text-primary fw-bold">&lt; 55ppm</p>
+                            <p class="card-text">Low sulphur content makes it environmentally friendly for biodiesel production.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 specs-card p-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Phosphorous Content</h3>
+                            <p class="display-6 text-primary fw-bold">&lt; 50ppm</p>
+                            <p class="card-text">Low phosphorous ensures better quality for various industrial applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section id="applications" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Applications</h2>
+                <p class="lead">Versatile uses across multiple industries</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card application-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Poultry Feed</h3>
+                            <p class="card-text">An excellent source of fat and energy for broilers and chickens, promoting healthy growth and development.</p>
+                            <ul>
+                                <li>High energy density</li>
+                                <li>Essential fatty acids</li>
+                                <li>Improved feed efficiency</li>
+                                <li>Enhanced palatability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card application-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Biodiesel Production</h3>
+                            <p class="card-text">High-quality raw material for biodiesel manufacturing with excellent conversion efficiency.</p>
+                            <ul>
+                                <li>Low sulphur content</li>
+                                <li>Consistent quality</li>
+                                <li>High conversion yield</li>
+                                <li>Environmentally friendly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card application-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Industrial Applications</h3>
+                            <p class="card-text">Used in various industries requiring vegetable fats for manufacturing processes.</p>
+                            <ul>
+                                <li>Soap production</li>
+                                <li>Lubricants</li>
+                                <li>Coatings</li>
+                                <li>Other oleochemical applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Contact Us</h2>
+                    <p class="lead">Ready to discuss your requirements?</p>
+                    <p>We're here to answer any questions you may have about our Soya Acid Oil. Reach out to us and we'll respond as soon as possible.</p>
                     
-                    <p>Our state-of-the-art processing facility utilizes advanced technology to ensure our product consistently meets the stringent specifications required by our clients in various industries. We take pride in our ability to deliver products that enhance the nutritional value of poultry feed while also serving as a sustainable raw material for biodiesel production.</p>
-                    
-                    <p>With a strong domestic presence, we are now expanding our operations to serve global markets, bringing our expertise and quality products to customers worldwide.</p>
-                    
+                    <div class="mt-5">
+                        <div class="d-flex mb-4">
+                            <div class="me-4 text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Adi Shakti Enterprise</h5>
+                                <p class="mb-0">Katwa, Purba Burdwan, West Bengal, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-4 text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Email Us</h5>
+                                <p class="mb-0">adishakti.2022@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-4 text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Call/WhatsApp</h5>
+                                <p class="mb-0">+91 6289274766</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="me-4 text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Find Us On</h5>
+                                <div class="d-flex flex-wrap">
+                                    <a href="https://www.ecofeeds.in" class="btn btn-sm btn-outline-primary me-2 mb-2">Our Website</a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary me-2 mb-2">Tradewheel</a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary me-2 mb-2">Go4Business</a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary me-2 mb-2">TradeIndia</a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary mb-2">India Mart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-5">
+                            <h3 class="card-title mb-4">Send Us a Message</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Adi Shakti Enterprise</h5>
+                    <p>Manufacturers of premium quality Soya Acid Oil for poultry feed and biodiesel applications.</p>
                     <div class="quality-badge">
-                        <p><i class="fas fa-certificate" style="color: var(--secondary);"></i> Quality Certified by NABL-Accredited Labs</p>
-                        <p>Contact us for complete lab reports and quality certifications</p>
+                        Quality Certified by NABL-Accredited Labs
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Products</h2>
-            </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-info">
-                        <h3>Soya Acid Oil for Poultry Feed</h3>
-                        <p>An excellent source of fat, proteins and vital nutrients essential for the growth of broilers and chickens.</p>
-                        <div class="specs">
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Free Fatty Acid: Below 5%</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Iodine Value: 125</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Impurities & Moisture: &lt;0.30%</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Sulphur: &lt;55ppm</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Phosphorous: &lt;50ppm</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">About Us</a></li>
+                        <li><a href="#product" class="text-white">Our Product</a></li>
+                        <li><a href="#specifications" class="text-white">Specifications</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="product-card">
-                    <div class="product-info">
-                        <h3>Soya Acid Oil for Biodiesel</h3>
-                        <p>High-quality raw material for biodiesel production with consistent properties for optimal conversion.</p>
-                        <div class="specs">
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Free Fatty Acid: Below 5%</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Iodine Value: 125</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Impurities & Moisture: &lt;0.30%</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Sulphur: &lt;55ppm</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Phosphorous: &lt;50ppm</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-info">
-                        <h3>Industrial Grade Soya Acid Oil</h3>
-                        <p>Versatile vegetable fat source for various industrial applications requiring consistent quality.</p>
-                        <div class="specs">
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Free Fatty Acid: Below 5%</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Iodine Value: 125</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Impurities & Moisture: &lt;0.30%</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Sulphur: &lt;55ppm</span>
-                            </div>
-                            <div class="spec-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Phosphorous: &lt;50ppm</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="comparison-section" id="comparison">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Our Soya Acid Oil?</h2>
-            </div>
-            <p>Our soya acid oil stands out from other vegetable oils due to its superior quality parameters that make it ideal for both poultry feed and biodiesel production. The balanced composition of fatty acids, low impurities, and consistent quality give our product distinct advantages in various applications.</p>
-            
-            <div class="comparison-grid">
-                <div class="comparison-card">
-                    <h3>Quality Comparison</h3>
-                    <div class="spec-comparison">
-                        <div class="spec-row header">
-                            <div class="spec-name">Parameter</div>
-                            <div class="spec-value">Our Oil</div>
-                            <div class="spec-value">Industry Avg.</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Free Fatty Acid</div>
-                            <div class="spec-value advantage">&lt;5%</div>
-                            <div class="spec-value">5-15%</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Iodine Value</div>
-                            <div class="spec-value advantage">125</div>
-                            <div class="spec-value">110-130</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Impurities</div>
-                            <div class="spec-value advantage">&lt;0.30%</div>
-                            <div class="spec-value">0.5-1.0%</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Sulphur (ppm)</div>
-                            <div class="spec-value advantage">&lt;55</div>
-                            <div class="spec-value">60-100</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Phosphorous (ppm)</div>
-                            <div class="spec-value advantage">&lt;50</div>
-                            <div class="spec-value">50-150</div>
-                        </div>
-                    </div>
-                    <p>Our stringent quality control ensures consistently better parameters than industry averages, resulting in superior performance in both feed and fuel applications.</p>
-                </div>
-                
-                <div class="comparison-card">
-                    <h3>Linoleic Acid Comparison</h3>
-                    <div class="spec-comparison">
-                        <div class="spec-row header">
-                            <div class="spec-name">Oil Type</div>
-                            <div class="spec-value">Linoleic Acid %</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Soya Acid Oil (Ours)</div>
-                            <div class="spec-value advantage">51-55%</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Palm Oil</div>
-                            <div class="spec-value">9-12%</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Sunflower Oil</div>
-                            <div class="spec-value">20-30%</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Canola Oil</div>
-                            <div class="spec-value">18-25%</div>
-                        </div>
-                        <div class="spec-row">
-                            <div class="spec-name">Corn Oil</div>
-                            <div class="spec-value">40-50%</div>
-                        </div>
-                    </div>
-                    <p>The high linoleic acid content in our soya acid oil provides essential fatty acids for poultry growth and improves biodiesel cold flow properties.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="research-section" id="research">
-        <div class="container">
-            <div class="section-title">
-                <h2>Scientific Research & Benefits</h2>
-            </div>
-            <p>Numerous studies have demonstrated the advantages of using soya acid oil in poultry feed and biodiesel production. Here are some key findings from scientific research:</p>
-            
-            <div class="research-item">
-                <h4>Poultry Growth Performance</h4>
-                <p>A 2021 study published in the Journal of Animal Science found that broilers fed with soya acid oil-based diets showed 12-15% better weight gain compared to those fed with palm oil-based diets, due to the higher linoleic acid content and better fatty acid profile.</p>
-                <div class="source">Source: Journal of Animal Science, 2021;99(5):1-12</div>
-            </div>
-            
-            <div class="research-item">
-                <h4>Biodiesel Production Efficiency</h4>
-                <p>Research from the Renewable Energy Institute demonstrated that soya acid oil with FFA content below 5% (like ours) requires 30% less catalyst for biodiesel conversion compared to higher FFA oils, resulting in more cost-effective production and purer biodiesel.</p>
-                <div class="source">Source: Renewable Energy, 2020;152:1234-1242</div>
-            </div>
-            
-            <div class="research-item">
-                <h4>Nutrient Absorption</h4>
-                <p>A comparative study in Poultry Science showed that the balanced fatty acid composition of soya acid oil enhances the absorption of fat-soluble vitamins (A, D, E, K) by 18-22% compared to other vegetable oils, leading to healthier poultry flocks.</p>
-                <div class="source">Source: Poultry Science, 2019;98(10):5123-5131</div>
-            </div>
-            
-            <div class="chart-container">
-                <h3>Linoleic Acid Content in Various Vegetable Oils</h3>
-                <div style="background-color: #ffffff; padding: 1rem; border-radius: 8px; text-align: center;">
-                    <p>[Linoleic Acid Comparison Chart Would Appear Here]</p>
-                </div>
-                
-                <div class="chart-remarks">
-                    <h4>Key Advantages of High Linoleic Acid Content</h4>
-                    <ul class="advantages-list">
-                        <li><strong>For Poultry Feed:</strong> Linoleic acid is an essential fatty acid that promotes feather growth, improves skin health, and enhances overall growth performance in broilers and chickens.</li>
-                        <li><strong>For Biodiesel:</strong> Oils with higher linoleic acid content produce biodiesel with better cold flow properties (lower cloud and pour points), making it more suitable for use in cooler climates.</li>
-                        <li><strong>Oxidative Stability:</strong> The natural antioxidants in our soya acid oil help maintain product quality during storage and extend the shelf life of both poultry feed and biodiesel.</li>
-                        <li><strong>Energy Density:</strong> The specific fatty acid profile of our oil provides optimal energy content (8,500-8,800 kcal/kg) for poultry nutrition while maintaining good combustion properties for biodiesel.</li>
+                <div class="col-lg-4">
+                    <h5>Our Presence</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Exporters India</a></li>
+                        <li><a href="#" class="text-white">Tradewheel</a></li>
+                        <li><a href="#" class="text-white">Go4Business</a></li>
+                        <li><a href="#" class="text-white">TradeIndia</a></li>
+                        <li><a href="#" class="text-white">India Mart</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="process" id="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Process</h2>
-            </div>
-            <p>We maintain strict quality control at every stage of production to ensure our soya acid oil meets the highest industry standards.</p>
-            <div class="process-steps">
-                <div class="step">
-                    <i class="fas fa-seedling"></i>
-                    <h3>Raw Material Sourcing</h3>
-                    <p>We source only the highest quality soybeans from trusted suppliers to ensure premium raw material for our process.</p>
+            <hr class="my-4 bg-light">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Adi Shakti Enterprise. All rights reserved.</p>
                 </div>
-                <div class="step">
-                    <i class="fas fa-industry"></i>
-                    <h3>Advanced Processing</h3>
-                    <p>Our state-of-the-art facility in Katwa uses modern technology to extract and refine soya acid oil with precision.</p>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed for Global Markets</p>
                 </div>
-                <div class="step">
-                    <i class="fas fa-flask"></i>
-                    <h3>Quality Testing</h3>
-                    <p>Every batch undergoes rigorous testing to verify it meets our strict specifications before approval for shipment.</p>
-                </div>
-                <div class="step">
-                    <i class="fas fa-truck"></i>
-                    <h3>Efficient Distribution</h3>
-                    <p>We maintain an efficient logistics network to deliver our products to customers domestically and internationally.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="clients" id="clients">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Clients</h2>
-            </div>
-            <p>We proudly serve a diverse range of industries that rely on our high-quality soya acid oil for their production needs.</p>
-            <div class="client-logos">
-                <div>[Poultry Feed Manufacturers]</div>
-                <div>[Biodiesel Producers]</div>
-                <div>[Food Industry]</div>
-                <div>[Industrial Applications]</div>
-                <div>[Export Markets]</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Our Facility</h4>
-                                <p>Katwa, Purba Burdwan, West Bengal, India</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <h4>WhatsApp</h4>
-                                <p>+91 6289274766</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>adishakti.2022@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-globe"></i>
-                            <div>
-                                <h4>Website</h4>
-                                <p>ecofeeds.in</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="b2b-platforms">
-                        <h4>Find us on B2B Platforms:</h4>
-                        <div class="platform-links">
-                            <a href="#" class="platform-link">Exporters India</a>
-                            <a href="#" class="platform-link">Tradewheel</a>
-                            <a href="#" class="platform-link">Go4business</a>
-                            <a href="#" class="platform-link">TradeIndia</a>
-                            <a href="#" class="platform-link">India Mart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">Product Interest</label>
-                            <select id="interest" name="interest">
-                                <option value="poultry">Soya Acid Oil for Poultry Feed</option>
-                                <option value="biodiesel">Soya Acid Oil for Biodiesel</option>
-                                <option value="industrial">Industrial Grade Soya Acid Oil</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Adi Shakti Enterprise</h3>
-                    <p>Leading processors of premium quality soya acid oil for poultry feed, biodiesel, and industrial applications.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#comparison">Why Choose Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Products</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Soya Acid Oil for Poultry</a></li>
-                        <li><a href="#">Soya Acid Oil for Biodiesel</a></li>
-                        <li><a href="#">Industrial Grade Oil</a></li>
-                        <li><a href="#">Specifications</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Katwa, Purba Burdwan, WB</li>
-                        <li><i class="fas fa-phone-alt"></i> +91 6289274766</li>
-                        <li><i class="fas fa-envelope"></i> adishakti.2022@gmail.com</li>
-                        <li><i class="fas fa-globe"></i> ecofeeds.in</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Adi Shakti Enterprise. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Simple form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you soon.');
-            this.reset();
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.specs-card, .application-card');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if(elementPosition < screenPosition) {
+                        element.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
                 });
-            });
-        });
-        
-        // Animation on scroll for research items
-        const researchItems = document.querySelectorAll('.research-item');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, {threshold: 0.1});
-        
-        researchItems.forEach(item => {
-            observer.observe(item);
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Trigger on load for elements already in view
         });
     </script>
 </body>
